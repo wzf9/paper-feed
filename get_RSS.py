@@ -116,7 +116,7 @@ def get_existing_items():
                 'link': entry.get('link', ''),
                 'pub_date': pub_date,
                 'summary': entry.get('summary', ''),
-                'journal': entry.get('author', ''),
+                'journal': entry.get('dc_source', '') or entry.get('author', ''),
                 'id': entry.get('id', entry.get('link', '')),
                 'is_old': True
             })
